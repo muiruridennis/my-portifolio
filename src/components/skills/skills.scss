@@ -1,0 +1,87 @@
+@import "../../app/globals.scss";
+
+
+.skill-container {
+    text-align: center;
+    margin-top: 2rem;
+    height: calc(100vh - 400px);
+
+
+    .title {
+        font-size: 2rem;
+        margin-bottom: 12px;
+        color: #f0f8ff;
+        @include playfair-font;
+    }
+
+    h3 {
+        font-size: 1.125rem;
+        line-height: 1.75rem;
+        margin-bottom: 2.5rem;
+        color: #f0f8ff;
+
+    }
+
+    .cards {
+        max-width: 1200px;
+        margin:  auto;
+        display: grid;
+        gap: 2rem;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        @include mobile{
+            padding: 2rem;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+
+        }
+        .card {
+            background-color: #ffffff;
+            width: auto;
+            text-align: justify;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            color: #000;
+            padding: 1rem;
+            border-radius: 8px;
+
+            img {
+                height: 100px;
+                width: auto;
+                object-fit: cover;
+                margin-bottom: 1rem;
+            }
+
+            h2 {
+                margin-bottom: 1rem;
+            }
+
+        }
+    }
+
+    .custom-divider {
+        display: flex;
+        align-items: center;
+        width: 100%;
+        margin: 20px 0;
+
+
+        .divider-line {
+            flex-grow: 1;
+            height: 1px;
+            background-color: #ccc;
+        }
+
+        .divider-label {
+            margin: 0 10px;
+            font-size: 1rem;
+            color: #05c56c;
+        }
+    }
+
+    .text-lg-paragraph {
+        font-size: 1.125rem;
+        line-height: 1.75;
+        margin-top: 1.25rem;
+        text-align: center;
+    }
+}
